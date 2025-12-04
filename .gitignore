@@ -1,0 +1,8 @@
+*__pycache__/
+llama.cpp/
+models/*.gguf
+mnist/*.gz
+chap02/main
+chap09/frame_walker
+chap09/*.mov
+chap10/main

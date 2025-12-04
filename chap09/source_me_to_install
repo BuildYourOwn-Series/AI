@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+python -m venv .venv
+source .venv/bin/activate
+
+pip install --upgrade pip
+pip install "torch==2.9.0" "torchvision==0.24.0"
+pip install "numpy<2.0"
+pip install ultralytics
+
+python - << 'EOF'
+import torch
+import torchvision
+import numpy
+import ultralytics
+
+print("torch:", torch.__version__)
+print("torchvision:", torchvision.__version__)
+print("numpy:", numpy.__version__)
+print("ultralytics:", ultralytics.__version__)
+
+# Try loading the YOLO model
+from ultralytics import YOLO
+YOLO('yolov8n.pt')
+print("YOLOv8n model loaded successfully.")
+EOF

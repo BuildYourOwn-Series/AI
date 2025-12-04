@@ -1,0 +1,20 @@
+# Common compiled binaries
+*.out
+*.exe
+*.bin
+*.dll
+*.so
+*.dylib
+
+# Ignore all files without a dot in their name
+[^.]*
+
+# But keep directories and known source files
+!*/
+!*.c
+!*.cpp
+!*.h
+!*.py
+!*.sh
+!*.pl
+!*.gz
